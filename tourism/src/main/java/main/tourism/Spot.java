@@ -10,10 +10,7 @@ import java.time.LocalDate;
 @Setter
 @Entity(name = "Spot")
 @Table(
-        name = "spot",
-        uniqueConstraints = {
-                @UniqueConstraint(name="spot_name_unique",columnNames = "spot_name")
-        }
+        name = "spot"
 )
 
 public class Spot {
