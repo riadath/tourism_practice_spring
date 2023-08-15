@@ -17,36 +17,36 @@ public class TourismApplication {
         SpringApplication.run(TourismApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner commandLineRunner(SpotRepository spotRepository) {
-        return args -> {
-            List<Spot> spotList = new ArrayList<>();
-            List<String> LocationList = new ArrayList<>();
-
-            LocationList.add("Japan");
-            LocationList.add("Italy");
-            LocationList.add("France");
-            LocationList.add("Australia");
-            LocationList.add("Thailand");
-
-            Random rand = new Random(898);
-            for(int i = 0;i < 10;i++){
-                spotList.add(new Spot(
-                        "Spot " + i,
-                        LocalDate.of(2021, 1, 1),
-                        LocalDate.of(2021, 12, 31),
-                        "Description " + i,
-                        LocationList.get(rand.nextInt(LocationList.size()))
-                ));
-            }
-
-
-            spotRepository.saveAll(
-                    spotList
-            );
-
-
-        };
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner(SpotRepository spotRepository) {
+//        return args -> {
+//            List<Spot> spotList = new ArrayList<>();
+//            List<String> LocationList = new ArrayList<>();
+//
+//            LocationList.add("Japan");
+//            LocationList.add("Italy");
+//            LocationList.add("France");
+//            LocationList.add("Australia");
+//            LocationList.add("Thailand");
+//
+//            Random rand = new Random(898);
+//            for(int i = 0;i < 10;i++){
+//                spotList.add(new Spot(
+//                        "Spot " + i,
+//                        LocalDate.of(2021, 1, 1),
+//                        LocalDate.of(2021, 12, 31),
+//                        "Description " + i,
+//                        LocationList.get(rand.nextInt(LocationList.size()))
+//                ));
+//            }
+//
+//
+//            spotRepository.saveAll(
+//                    spotList
+//            );
+//
+//
+//        };
+//    }
 
 }
